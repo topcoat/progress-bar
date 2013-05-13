@@ -5,5 +5,6 @@ html
 		title Topcoat progress bar
 		link(rel='stylesheet', type='text/css', href='../../release/css/topcoat-progress-bar.min.css')
 	body
-		- while (repeats > 0)
-			- var repeats = repeats - 1
+		- while (--repeats)
+			.topcoat-progress-bar
+				span.progress(style='width:40%')
