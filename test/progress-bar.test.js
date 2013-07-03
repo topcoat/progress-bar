@@ -27,11 +27,12 @@ exports.styleguide = {
     // setup here if necessary
     done();
   },
-  stylus: function(test) {
+  diffName: function(test) {
     test.expect(1);
 
     var actual = grunt.file.read('release/css/topcoat-progress-bar.css');
     var expected = grunt.file.read('test/expected/topcoat-progress-bar.css');
+
     test.equal(actual, expected, 'should generate correct css');
 
     test.done();
